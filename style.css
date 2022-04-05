@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #22254b;
+    --secondary-color: #373b69;
+}
+
+body {
+    background-color: var(--secondary-color);
+    margin: 0;
+    min-height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
+}
+
+header {
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: 2px solid var(--primary-color);
+}
+
+.header_logo {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: bold;
+    letter-spacing: -2px;
+    word-spacing: -1px;
+}
+
+.header_logo > span {
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+    font-weight: 900;
+    letter-spacing: -4px;
+    margin-left: -5px;
+    font-size: 24px;
+}
+
+.search {
+    background-color: transparent;
+    border: 1px solid #3ad4df;
+    border-radius: 50px;    
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    outline: none;
+}
+
+.search::placeholder {
+    color: #aaa;
+}
+
+.search:focus {
+    background-color: var(--primary-color);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem 2rem ;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3) ;
+    position: relative;
+    overflow: hidden;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+}
+
+.movie_info h3 {
+    margin-top: 0;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem ;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.movie-info span.green {
+   color: lightgreen;
+}
+.movie-info span.orange {
+    color: orange;
+}
+.movie-info span.red {
+    color: red;
+}
+
+.overview {
+    background-color: white;
+    padding: 2rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: transform 0.4s ease-in;
+}
+
+.movie:hover .overview {
+    transform: translateY(-30%);
+}
+
+.footer {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.footer > svg {
+    width: 40%;
+    height: 20px;
+}
+.footer .power {
+    color: #fff;
+    font-size: medium;
+    font-family:  cursive;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.footer  a {
+    text-decoration: none;
+}
+
